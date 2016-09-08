@@ -52,23 +52,17 @@ import java.util.Properties;
  * Created by plorial on 9/6/16.
  */
 public class Main {
-    /**
-     * Define a global instance of a YouTube object, which will be used to make
-     * YouTube Data API requests.
-     */
+
     private static YouTube youtube;
 
     private static final String PROPERTIES_FILENAME = "youtube.properties";
 
     private static final long NUMBER_OF_VIDEOS_RETURNED = 50;
 
+    static Properties properties;
 
+    static String chanelId = "UCyGPa4_EYA1OiBNjf6IeF6A";
 
-    /**
-     * Upload, list, update, download, and delete caption tracks.
-     *
-     * @param args command line args (not used).
-     */
     public static void main(String[] args) {
 
         // This OAuth 2.0 access scope allows for full read/write access to the
@@ -76,7 +70,7 @@ public class Main {
         List<String> scopes = Lists.newArrayList("https://www.googleapis.com/auth/youtube.force-ssl");
 
         // Read the developer key from the properties file.
-        Properties properties = new Properties();
+        properties = new Properties();
         try {
             InputStream in = YouTube.Search.class.getResourceAsStream("/" + PROPERTIES_FILENAME);
             properties.load(in);
@@ -88,9 +82,6 @@ public class Main {
         }
 
         try {
-            // Authorize the request.
-//            Credential credential = Auth.authorize(scopes, "captions");
-
             HttpTransport transport = GoogleNetHttpTransport.newTrustedTransport();
             JsonFactory jsonFactory = new JacksonFactory();
             GoogleCredential credential = GoogleCredential.fromStream(new FileInputStream("/home/plorial/Documents/YouTubeSubtitlesDownloader-017d8a98ef76.json"));
@@ -100,36 +91,33 @@ public class Main {
             youtube = new YouTube.Builder(transport, jsonFactory, credential)
                     .setApplicationName("youtubesubtitlesdownloader").build();
 
-
             String queryTerm = "";
-            String chanelId = "UCEMyt3qCrwa4wETvsheB95w";
 
             // Define the API request for retrieving search results.
             YouTube.Search.List search = youtube.search().list("id,snippet");
 
-            // Set your developer key from the Google API Console for
-            // non-authenticated requests. See:
-            // https://console.developers.google.com/
-            String apiKey = properties.getProperty("youtube.apikey");
-            search.setKey(apiKey);
-//            search.setQ(queryTerm);
-            search.setChannelId(chanelId);
-//            search.setVideoCaption("closedCaption");
-
-            // Restrict the search results to only include videos. See:
-            // https://developers.google.com/youtube/v3/docs/search/list#type
-            search.setType("video");
-
-            // To increase efficiency, only retrieve the fields that the
-            // application uses.
-            search.setFields("items(id/kind,id/videoId,snippet/title,snippet/thumbnails/default/url)");
-            search.setMaxResults(NUMBER_OF_VIDEOS_RETURNED);
-
+            initSearch(search);
             // Call the API and print results.
             SearchListResponse searchResponse = search.execute();
+            String nextPageToken = searchResponse.getNextPageToken();
+            System.out.println(nextPageToken);
             List<SearchResult> searchResultList = searchResponse.getItems();
             if (searchResultList != null) {
-                prettyPrint(searchResultList.iterator(), queryTerm);
+//                prettyPrint(searchResultList.iterator(), queryTerm);
+                System.out.println("search list " + searchResultList.size());
+                printAllURLS(searchResultList);
+            }
+            System.out.println("first done");
+            while (nextPageToken != null){
+                search = youtube.search().list("id,snippet");
+                initSearch(search);
+                search.setPageToken(nextPageToken);
+                searchResponse = search.execute();
+                nextPageToken = searchResponse.getNextPageToken();
+                searchResultList = searchResponse.getItems();
+                if (searchResultList != null) {
+                    printAllURLS(searchResultList);
+                }
             }
 
         } /*catch (GoogleJsonResponseException e) {
@@ -144,7 +132,44 @@ public class Main {
         }
     }
 
-    private void getVideoTimedText(String videoId){
+    private static void initSearch(YouTube.Search.List search){
+
+        // Set your developer key from the Google API Console for
+        // non-authenticated requests. See:
+        // https://console.developers.google.com/
+        String apiKey = properties.getProperty("youtube.apikey");
+        search.setKey(apiKey);
+//            search.setQ(queryTerm);
+        search.setChannelId(chanelId);
+//            search.setVideoCaption("closedCaption");
+
+        // Restrict the search results to only include videos. See:
+        // https://developers.google.com/youtube/v3/docs/search/list#type
+        search.setType("video");
+        search.setOrder("date");
+        // To increase efficiency, only retrieve the fields that the
+        // application uses.
+        search.setFields("items(id/kind,id/videoId,snippet/title,snippet/thumbnails/default/url),nextPageToken");
+        search.setMaxResults(NUMBER_OF_VIDEOS_RETURNED);
+    }
+
+    private static void printAllURLS(List<SearchResult> searchResultList){
+        Iterator<SearchResult> iteratorSearchResults = searchResultList.iterator();
+        if (!iteratorSearchResults.hasNext()) {
+            System.out.println(" There aren't any results for your query.");
+        }
+        while (iteratorSearchResults.hasNext()) {
+
+            SearchResult singleVideo = iteratorSearchResults.next();
+            ResourceId rId = singleVideo.getId();
+//                    String title = singleVideo.getSnippet().getTitle();
+            String videoId = rId.getVideoId();
+            System.out.println("http://www.youtube.com/watch?v="+videoId);
+
+        }
+    }
+
+    private static void writeVideoTimedText(String videoId, String videoName){
         try {
         String url = "http://video.google.com/timedtext?";
         String lang = "lang=ru&";
@@ -163,75 +188,30 @@ public class Main {
         TransformerFactory f = TransformerFactory.newInstance();
         Transformer xform = f.newTransformer();
 
-// that’s the default xform; use a stylesheet to get a real one
-        xform.transform(new DOMSource(doc), new StreamResult(System.out));
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (TransformerConfigurationException e) {
-            e.printStackTrace();
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (TransformerException e) {
-            e.printStackTrace();
-        }
-    }
+        OutputStream outputStream = null;
+            File file = null;
+            String outputFolder = "/home/plorial/Documents/YouTubeSubs/";
+            try {
+                File folder = new File(outputFolder);
+                if(!folder.exists()){
+                    folder.mkdir();
+                }
+                file = new File(outputFolder, videoName + videoId + ".xml");
+                if(!file.exists()){
+                    file.createNewFile();
+                }
+                outputStream = new FileOutputStream(file);
 
-    /*
-    * Prompt the user to enter a query term and return the user-specified term.
-    */
-    private static String getInputQuery() throws IOException {
-
-        String inputQuery = "";
-
-        System.out.print("Please enter a search term: ");
-        BufferedReader bReader = new BufferedReader(new InputStreamReader(System.in));
-        inputQuery = bReader.readLine();
-
-        if (inputQuery.length() < 1) {
-            // Use the string "YouTube Developers Live" as a default.
-            inputQuery = "YouTube Developers Live";
-        }
-        return inputQuery;
-    }
-
-    /*
-     * Prints out all results in the Iterator. For each result, print the
-     * title, video ID, and thumbnail.
-     *
-     * @param iteratorSearchResults Iterator of SearchResults to print
-     *
-     * @param query Search query (String)
-     */
-    private static void prettyPrint(Iterator<SearchResult> iteratorSearchResults, String query) {
-
-        System.out.println("\n=============================================================");
-        System.out.println(
-                "   First " + NUMBER_OF_VIDEOS_RETURNED + " videos for search on \"" + query + "\".");
-        System.out.println("=============================================================\n");
-
-        if (!iteratorSearchResults.hasNext()) {
-            System.out.println(" There aren't any results for your query.");
-        }
-
-        while (iteratorSearchResults.hasNext()) {
-
-            SearchResult singleVideo = iteratorSearchResults.next();
-            ResourceId rId = singleVideo.getId();
-
-            // Confirm that the result represents a video. Otherwise, the
-            // item will not contain a video ID.
-            if (rId.getKind().equals("youtube#video")) {
-                Thumbnail thumbnail = singleVideo.getSnippet().getThumbnails().getDefault();
-
-                System.out.println(" Video Id" + rId.getVideoId());
-                System.out.println(" Title: " + singleVideo.getSnippet().getTitle());
-                System.out.println(" Thumbnail: " + thumbnail.getUrl());
-                System.out.println("\n-------------------------------------------------------------\n");
+                xform.transform(new DOMSource(doc), new StreamResult(outputStream));
+            }catch (IOException e){
+                e.printStackTrace();
+            }finally {
+                if(outputStream != null){
+                    outputStream.close();
+                }
             }
+        } catch (IOException | ParserConfigurationException | SAXException | TransformerException e) {
+            e.printStackTrace();
         }
     }
 }

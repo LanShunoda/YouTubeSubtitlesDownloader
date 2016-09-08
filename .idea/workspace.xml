@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94654f22-7909-4943-bd65-2ca61032e584" name="Default" comment="" />
+    <list default="true" id="94654f22-7909-4943-bd65-2ca61032e584" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/plorial/youtubesubtitlesdownloader/Result.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/plorial/youtubesubtitlesdownloader/TextSearcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/main/com/plorial/youtubesubtitlesdownloader/Main.class" afterPath="$PROJECT_DIR$/build/classes/main/com/plorial/youtubesubtitlesdownloader/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/plorial/youtubesubtitlesdownloader/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/plorial/youtubesubtitlesdownloader/Main.java" />
+    </list>
     <ignored path="YouTubeSubtitlesDownloader.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path="$USER_HOME$/Documents/Google2SRT-0.7.5/.gradle/" />
+    <ignored path="$USER_HOME$/Documents/Google2SRT-0.7.5/build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +30,9 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="ExternalProjectsData">
+    <projectState path="$USER_HOME$/Documents/Google2SRT-0.7.5">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
@@ -52,24 +65,41 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/plorial/youtubesubtitlesdownloader/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.2046633">
-              <caret line="115" column="36" selection-start-line="115" selection-start-column="36" selection-end-line="115" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.48305085">
+              <caret line="68" column="87" selection-start-line="68" selection-start-column="87" selection-end-line="68" selection-end-column="87" />
               <folding>
                 <element signature="docComment;class#Main#0" expanded="false" />
-                <element signature="docComment;field#youtube#0;class#Main#0" expanded="false" />
-                <element signature="docComment;method#main#0;class#Main#0" expanded="false" />
-                <element signature="e#2774#2845#0" expanded="false" />
+                <element signature="e#2598#2669#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="youtube.properties" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/youtube.properties">
+      <file leaf-file-name="TextSearcher.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/plorial/youtubesubtitlesdownloader/TextSearcher.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-              <folding />
+              <caret line="81" column="17" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3664#3672#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Result.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/plorial/youtubesubtitlesdownloader/Result.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#304#305#0" expanded="true" />
+                <element signature="e#336#337#0" expanded="true" />
+                <element signature="e#407#408#0" expanded="true" />
+                <element signature="e#441#442#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,9 +113,28 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="GradleLocalSettings">
     <option name="availableProjects">
       <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="Google2SRT-0.7.5" />
+              <option name="path" value="$USER_HOME$/Documents/Google2SRT-0.7.5" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="Google2SRT-0.7.5" />
+                <option name="path" value="$USER_HOME$/Documents/Google2SRT-0.7.5" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
         <entry>
           <key>
             <ExternalProjectPojo>
@@ -106,6 +155,62 @@
     </option>
     <option name="availableTasks">
       <map>
+        <entry key="$USER_HOME$/Documents/Google2SRT-0.7.5">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by root project 'Google2SRT-0.7.5'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$USER_HOME$/Documents/Google2SRT-0.7.5" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in root project 'Google2SRT-0.7.5'." />
+                <option name="linkedExternalProjectPath" value="$USER_HOME$/Documents/Google2SRT-0.7.5" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in root project 'Google2SRT-0.7.5'." />
+                <option name="linkedExternalProjectPath" value="$USER_HOME$/Documents/Google2SRT-0.7.5" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$USER_HOME$/Documents/Google2SRT-0.7.5" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Initializes a new Gradle build. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$USER_HOME$/Documents/Google2SRT-0.7.5" />
+                <option name="name" value="init" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of root project 'Google2SRT-0.7.5'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$USER_HOME$/Documents/Google2SRT-0.7.5" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of root project 'Google2SRT-0.7.5'." />
+                <option name="linkedExternalProjectPath" value="$USER_HOME$/Documents/Google2SRT-0.7.5" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of root project 'Google2SRT-0.7.5'." />
+                <option name="linkedExternalProjectPath" value="$USER_HOME$/Documents/Google2SRT-0.7.5" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from root project 'Google2SRT-0.7.5'." />
+                <option name="linkedExternalProjectPath" value="$USER_HOME$/Documents/Google2SRT-0.7.5" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Gradle wrapper files. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$USER_HOME$/Documents/Google2SRT-0.7.5" />
+                <option name="name" value="wrapper" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$">
           <value>
             <list>
@@ -247,6 +352,30 @@
     </option>
     <option name="projectBuildClasspath">
       <map>
+        <entry key="$USER_HOME$/Documents/Google2SRT-0.7.5">
+          <value>
+            <ExternalProjectBuildClasspathPojo>
+              <option name="modulesBuildClasspath">
+                <map>
+                  <entry key="$USER_HOME$/Documents/Google2SRT-0.7.5">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="path" value="$USER_HOME$/Documents/Google2SRT-0.7.5" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="name" value="Google2SRT-0.7.5" />
+              <option name="projectBuildClasspath">
+                <list>
+                  <option value="$USER_HOME$/Documents/Google2SRT-0.7.5/buildSrc/src/main/java" />
+                  <option value="$USER_HOME$/Documents/Google2SRT-0.7.5/buildSrc/src/main/groovy" />
+                </list>
+              </option>
+            </ExternalProjectBuildClasspathPojo>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$">
           <value>
             <ExternalProjectBuildClasspathPojo>
@@ -356,6 +485,8 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/youtube.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/plorial/youtubesubtitlesdownloader/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/plorial/youtubesubtitlesdownloader/Result.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/plorial/youtubesubtitlesdownloader/TextSearcher.java" />
       </list>
     </option>
   </component>
@@ -371,7 +502,7 @@
     <option name="width" value="1368" />
     <option name="height" value="743" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -396,8 +527,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -469,18 +598,31 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="youtubesubtitlesdownloader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Google2SRT-0.7.5" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.TextSearcher">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -489,6 +631,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.plorial.youtubesubtitlesdownloader.Main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="YouTubeSubtitlesDownloader" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="TextSearcher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.plorial.youtubesubtitlesdownloader.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.plorial.youtubesubtitlesdownloader.TextSearcher" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -779,12 +941,14 @@
       <setting name="rowsRange" value="" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="1" class="java.lang.String" itemvalue="Application.TextSearcher" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Application.TextSearcher" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -803,20 +967,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1368" height="743" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5030303" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.4969697" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -828,6 +991,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -856,9 +1020,26 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#Main#0" expanded="false" />
-            <element signature="docComment;field#youtube#0;class#Main#0" expanded="false" />
-            <element signature="docComment;method#main#0;class#Main#0" expanded="false" />
-            <element signature="e#2774#2845#0" expanded="false" />
+            <element signature="e#2598#2669#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/youtube.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="25" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/plorial/youtubesubtitlesdownloader/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#Main#0" expanded="false" />
+            <element signature="e#2598#2669#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -877,9 +1058,7 @@
           <caret line="113" column="78" selection-start-line="113" selection-start-column="78" selection-end-line="113" selection-end-column="78" />
           <folding>
             <element signature="docComment;class#Main#0" expanded="false" />
-            <element signature="docComment;field#youtube#0;class#Main#0" expanded="false" />
-            <element signature="docComment;method#main#0;class#Main#0" expanded="false" />
-            <element signature="e#2774#2845#0" expanded="false" />
+            <element signature="e#2598#2669#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -915,15 +1094,197 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Documents/Google2SRT-0.7.5/src/TableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2823834">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#7062#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/Google2SRT-0.7.5/src/GUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="9.5">
+          <caret line="311" column="32" selection-start-line="311" selection-start-column="19" selection-end-line="311" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="docComment;method#GUI#0;class#GUI#0" expanded="false" />
+            <element signature="method#GUI#0;class#GUI#0" expanded="false" />
+            <element signature="class#3783:3916" expanded="false" />
+            <element signature="class#3988:4171" expanded="false" />
+            <element signature="method#run#0;class#3988:4171" expanded="false" />
+            <element signature="method#appErrorBundleMessage#0;class#GUI#0" expanded="false" />
+            <element signature="method#appManySelectedWarning#0;class#GUI#0" expanded="false" />
+            <element signature="method#appLogsBundleMessage#0;class#GUI#0" expanded="false" />
+            <element signature="method#appStatusBundleMessage#0;class#GUI#0" expanded="false" />
+            <element signature="method#appStatusConverting#0;class#GUI#0" expanded="false" />
+            <element signature="method#appStatusConnecting#0;class#GUI#0" expanded="false" />
+            <element signature="method#prepareNewConversion#0;class#GUI#0" expanded="false" />
+            <element signature="method#enableControls#0;class#GUI#0" expanded="false" />
+            <element signature="method#getBundle#0;class#GUI#0" expanded="false" />
+            <element signature="method#setLanguage#0;class#GUI#0" expanded="false" />
+            <element signature="method#tmSubtitlesLists_clear#0;class#GUI#0" expanded="false" />
+            <element signature="method#tmSubtitlesLists_width#0;class#GUI#0" expanded="false" />
+            <element signature="method#tmSubtitlesLists_getNumberSelectedTracks#0;class#GUI#0" expanded="false" />
+            <element signature="method#tmSubtitlesLists_getNumberSelectedTargets#0;class#GUI#0" expanded="false" />
+            <element signature="class#17631:17800" expanded="false" />
+            <element signature="docComment;method#initComponents#0;class#GUI#0" expanded="false" />
+            <element signature="e#18050#18139#0" expanded="false" />
+            <element signature="class#21563:21736" expanded="false" />
+            <element signature="class#22005:22185" expanded="false" />
+            <element signature="class#22491:22659" expanded="false" />
+            <element signature="class#22700:22866" expanded="false" />
+            <element signature="class#23182:23351" expanded="false" />
+            <element signature="class#23616:23794" expanded="false" />
+            <element signature="class#24065:24244" expanded="false" />
+            <element signature="class#24518:24698" expanded="false" />
+            <element signature="class#26041:26223" expanded="false" />
+            <element signature="class#26681:26863" expanded="false" />
+            <element signature="class#27321:27503" expanded="false" />
+            <element signature="class#27961:28143" expanded="false" />
+            <element signature="class#28601:28783" expanded="false" />
+            <element signature="class#29241:29423" expanded="false" />
+            <element signature="class#29881:30063" expanded="false" />
+            <element signature="class#30540:30724" expanded="false" />
+            <element signature="class#31182:31364" expanded="false" />
+            <element signature="class#31859:32045" expanded="false" />
+            <element signature="class#32548:32735" expanded="false" />
+            <element signature="class#32932:33107" expanded="false" />
+            <element signature="class#33319:33497" expanded="false" />
+            <element signature="class#33724:33905" expanded="false" />
+            <element signature="class#34112:34289" expanded="false" />
+            <element signature="class#34501:34679" expanded="false" />
+            <element signature="class#35781:35958" expanded="false" />
+            <element signature="class#36330:36506" expanded="false" />
+            <element signature="class#36896:37074" expanded="false" />
+            <element signature="class#37532:37714" expanded="false" />
+            <element signature="class#38131:38303" expanded="false" />
+            <element signature="class#56402:57605" expanded="false" />
+            <element signature="method#run#0;class#56402:57605" expanded="false" />
+            <element signature="class#59450:59607" expanded="false" />
+            <element signature="method#jbutOutputActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jbutSetLangCaActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jbutSetLangEsActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jbutSetLangEnActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jtfInputFocusGained#0;class#GUI#0" expanded="false" />
+            <element signature="method#checkPortRange#0;class#GUI#0" expanded="false" />
+            <element signature="method#jcbInvertActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jcbAllActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="class#64125:64282" expanded="false" />
+            <element signature="method#jrbURLListXMLItemStateChanged#0;class#GUI#0" expanded="false" />
+            <element signature="e#64543#64594#0" expanded="false" />
+            <element signature="method#jtfInputMousePressed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jtfOutputMousePressed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jbutSetLangPtBrActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jbutSetLangItActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jbutSetLangZhHanSActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jbutSetLangZhHansTActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jbutSetLangPlActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jbutSetLangFrActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jbutSetLangDeActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jbutSetLangRuActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jcbTrackNameActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jcbTitleActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jbutAboutActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jbutHelpActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jbutWebActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jbutSetLangUkActionPerformed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jtfHostInputMousePressed#0;class#GUI#0" expanded="false" />
+            <element signature="method#jcbTimingActionPerformed#0;class#GUI#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/Google2SRT-0.7.5/Changelog.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/java/jdk1.8.0_73/src.zip!/java/lang/Cloneable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68911916">
+          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/java/jdk1.8.0_73/src.zip!/java/util/AbstractMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3316062">
+          <caret line="67" column="22" selection-start-line="67" selection-start-column="22" selection-end-line="67" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client/1.22.0/354d5dd5f75febe40347abfa2d9517bae6281e73/google-http-client-1.22.0-sources.jar!/com/google/api/client/util/GenericData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3316062">
+          <caret line="46" column="38" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client/1.22.0/354d5dd5f75febe40347abfa2d9517bae6281e73/google-http-client-1.22.0-sources.jar!/com/google/api/client/json/GenericJson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3316062">
+          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-youtube/v3-rev178-1.22.0/a48dac8497fd54bbd11a52e23776bd848dc4734/google-api-services-youtube-v3-rev178-1.22.0-sources.jar!/com/google/api/services/youtube/model/SearchListResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="79" selection-start-line="33" selection-start-column="79" selection-end-line="33" selection-end-column="79" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/java/jdk1.8.0_73/src.zip!/java/nio/file/Files.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3241" column="56" selection-start-line="3241" selection-start-column="34" selection-end-line="3241" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/plorial/youtubesubtitlesdownloader/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+            <element signature="e#336#337#0" expanded="true" />
+            <element signature="e#407#408#0" expanded="true" />
+            <element signature="e#441#442#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/plorial/youtubesubtitlesdownloader/TextSearcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="81" column="17" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3664#3672#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/plorial/youtubesubtitlesdownloader/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2046633">
-          <caret line="115" column="36" selection-start-line="115" selection-start-column="36" selection-end-line="115" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.48305085">
+          <caret line="68" column="87" selection-start-line="68" selection-start-column="87" selection-end-line="68" selection-end-column="87" />
           <folding>
             <element signature="docComment;class#Main#0" expanded="false" />
-            <element signature="docComment;field#youtube#0;class#Main#0" expanded="false" />
-            <element signature="docComment;method#main#0;class#Main#0" expanded="false" />
-            <element signature="e#2774#2845#0" expanded="false" />
+            <element signature="e#2598#2669#0" expanded="false" />
           </folding>
         </state>
       </provider>
