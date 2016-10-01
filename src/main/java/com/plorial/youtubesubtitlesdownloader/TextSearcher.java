@@ -10,41 +10,26 @@ import java.nio.file.Paths;
 import java.text.BreakIterator;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.TreeMap;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by plorial on 9/8/16.
  */
 public class TextSearcher {
 
-    private static final String dirPath = "/home/plorial/Documents/YouTubeSubs/Sokol";
+    private static final String dirPath = "/home/plorial/Documents/YouTubeSubs/EEOneGay/subs/";
+    private static final String timeStampPattern = "([\\d:,]+)";
+
+    static Pattern pattern;
+
     private static File[] files;
-
     private static List<String> textWords;
-
     private static List<Result> result = new ArrayList<>();
 
-    private static final String TEXT = "Услыхав судьбы призыв\n" +
-            "Не трусь вперёд иди\n" +
-            "Ты не слушай шопот свой\n" +
-            "И победишь лишь ты\n" +
-            "\n" +
-            "В путь смелее пробил час\n" +
-            "И недруг не помеха нам \n" +
-            "Видь победный светит знак\n" +
-            "Воплоти наш план\n" +
-            "\n" +
-            "Покемон Мы сможим всё\n" +
-            "Ты и я Я знаю судьба моя\n" +
-            "Покемон\n" +
-            "Оу Мой лучший друг\n" +
-            "Нас узнают все вокруг\n" +
-            "Покемон Мы сможем всё\n" +
-            "Бой зовëт Не бойся иди вперëд\n" +
-            "\n" +
-            "Смело в бoй, Друзья с toboй!\n" +
-            "ПОКЕМОН\n" +
-            "Всех их cоберëм";
+    private static final String TEXT = "ног";
 
     public static void main(String[] args) {
         File folder = new File(dirPath);
@@ -54,17 +39,22 @@ public class TextSearcher {
             System.err.println("file is not directory");
             System.exit(1);
         }
-        textWords =  getWords(TEXT);
+
+
+        pattern = Pattern.compile(timeStampPattern);
+        textWords = new ArrayList<>();
+        textWords.add(TEXT);
+//        textWords =  getWords(TEXT);
         searchInFiles();
     }
 
     private static void searchInFiles() {
         for (String word: textWords) {
             Result r = new Result(word);
-            TreeMap<String, ArrayList<Integer>> links = new TreeMap<>();
+            TreeMap<String, Map<Integer, String>> links = new TreeMap<>();
             r.setLinks(links);
             for (int i = 0; i < files.length - 1; i++){
-                ArrayList<Integer> rowNums = new ArrayList<>();
+                Map<Integer, String> rowNums = new TreeMap();
 
                 List<String> fileRows = null;
                 try {
@@ -74,7 +64,15 @@ public class TextSearcher {
                 }
                 for (int j = 0; j < fileRows.size() - 1; j ++) {
                     if(fileRows.get(j).toLowerCase().contains(word.toLowerCase())){
-                        rowNums.add(j);
+                        String time = "";
+                        for(int k = 1; k < 3; k++){
+                            Matcher matcher = pattern.matcher(fileRows.get(j - k));
+                            if(matcher.find()){
+                                time = matcher.group();
+                                break;
+                            }
+                        }
+                        rowNums.put(j, time);
                     }
                 }
                 if(rowNums.size() > 0){
@@ -84,13 +82,13 @@ public class TextSearcher {
             System.out.println(r.toString());
             result.add(r);
         }
-        writeToFile();
+//        writeToFile();
     }
 
     private static void writeToFile() {
         FileWriter writer = null;
         try {
-            File out = new File("/home/plorial/Documents/YouTubeSubs/Sokol/output.txt");
+            File out = new File("/home/plorial/Documents/YouTubeSubs/EEOneGay/output.txt");
             if(!out.exists()){
                 out.createNewFile();
             }

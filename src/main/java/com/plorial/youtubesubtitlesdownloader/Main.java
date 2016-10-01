@@ -61,7 +61,7 @@ public class Main {
 
     static Properties properties;
 
-    static String chanelId = "UCyGPa4_EYA1OiBNjf6IeF6A";
+    static String chanelId = "UC-lHJZR3Gqxm24_Vd_AJ5Yw";
 
     public static void main(String[] args) {
 
@@ -107,7 +107,6 @@ public class Main {
                 System.out.println("search list " + searchResultList.size());
                 printAllURLS(searchResultList);
             }
-            System.out.println("first done");
             while (nextPageToken != null){
                 search = youtube.search().list("id,snippet");
                 initSearch(search);
