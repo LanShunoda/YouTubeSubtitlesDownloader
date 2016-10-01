@@ -51,10 +51,10 @@ public class TextSearcher {
     private static void searchInFiles() {
         for (String word: textWords) {
             Result r = new Result(word);
-            TreeMap<String, Map<Integer, String>> links = new TreeMap<>();
+            TreeMap<String, Map<String, String>> links = new TreeMap<>();
             r.setLinks(links);
             for (int i = 0; i < files.length - 1; i++){
-                Map<Integer, String> rowNums = new TreeMap();
+                Map<String, String> rowNums = new TreeMap();
 
                 List<String> fileRows = null;
                 try {
@@ -72,7 +72,7 @@ public class TextSearcher {
                                 break;
                             }
                         }
-                        rowNums.put(j, time);
+                        rowNums.put(j + " " + fileRows.get(j).replace(TEXT, "\u001B[31m" + TEXT  + "\u001B[0m"), time);
                     }
                 }
                 if(rowNums.size() > 0){

@@ -10,13 +10,13 @@ import java.util.*;
  */
 public class Result {
     private String word;
-    private TreeMap<String, Map<Integer, String>> links;
+    private TreeMap<String, Map<String, String>> links;
 
     public Result(String word) {
         this.word = word;
     }
 
-    public void setLinks(TreeMap<String, Map<Integer, String>> links) {
+    public void setLinks(TreeMap<String, Map<String, String>> links) {
         this.links = links;
     }
 
@@ -32,17 +32,18 @@ public class Result {
             builder.append("\n");
             SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm:ss,SSS");
 
-            for (Map.Entry<Integer,String> entry : links.get(fileName).entrySet()) {
+            for (Map.Entry<String,String> entry : links.get(fileName).entrySet()) {
                 Date time = null;
                 try {
                     time = dateFormat.parse(entry.getValue());
                 } catch (ParseException e) {}
                 if(time != null) {
-                    builder.append(entry.getKey() + " - " + entry.getValue() + " - "
+                    builder.append(entry.getValue() + " - "
                             + "https://youtu.be/" + fileName.substring(0, fileName.length() - 9) +
-                            "?t=" + time.getHours() + "h" + time.getMinutes() + "m" + time.getSeconds() + "s");
+                            "?t=" + time.getHours() + "h" + time.getMinutes() + "m" + time.getSeconds() + "s" + "  " +
+                            entry.getKey());
                 } else {
-                    builder.append(entry.getKey() + " - " + entry.getValue());
+                    builder.append(entry.getValue() + " - " + entry.getKey());
                 }
                 builder.append("\n");
             }
